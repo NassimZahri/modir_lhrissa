@@ -5,7 +5,7 @@ public class amogus {
 
         Scanner scan = new Scanner(System.in);
 
-        while (true) {
+        /*while (true) {
             char operation = ' ';
 
             while (operation != '+' && operation != '-' && operation != '*' && operation != '/' && operation != 'q') {
@@ -48,5 +48,27 @@ public class amogus {
         }
 
         scan.close();
+    */
+
+        System.out.println("Bienvenue dans le jeu de devinette");
+        int r = (int) (Math.random() * 100) + 1;
+        int x =0;
+        boolean y = true;
+        while(y){
+            System.out.println("devinez le nbr secret : ");
+            int n = scan.nextInt();
+            if(n > r){
+                System.out.println("Tros haut , redevinez lz nbr secret ! ");
+                x++;
+            }
+            else if(n<r){
+                System.out.println("Tros bas , redevinez lz nbr secret ! ");
+                x++;
+            }
+            else{
+                System.out.println("Tres bien !! , vous avez devinez le nbr secret ! ");
+                y=false;
+            }
+        }
     }
 }
