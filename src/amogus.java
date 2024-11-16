@@ -1,4 +1,3 @@
-import java.awt.*;
 import java.util.Scanner;
 
 public class amogus {
@@ -6,26 +5,48 @@ public class amogus {
 
         Scanner scan = new Scanner(System.in);
 
-        System.out.print("Les multiples de 3: ");
-        for (int i = 0; i <= 100; i++) {
-            if ( i % 3 == 0){
-                System.out.print(i);
+        while (true) {
+            char operation = ' ';
+
+            while (operation != '+' && operation != '-' && operation != '*' && operation != '/' && operation != 'q') {
+                System.out.print("Choose an operation ( + , - , * , /, q to quit ) => ");
+                operation = scan.next().charAt(0);
             }
-        }
-        System.out.println();
-        System.out.print("Les multiples de 5: ");
-        for (int i = 0; i <= 100; i++) {
-            if ( i % 3 == 0){
-                System.out.print(i);
+
+            if (operation == 'q') {
+                System.out.println("Exiting the program. Goodbye!");
+                break;
             }
-        }
-        System.out.println();
-        System.out.print("Les multiples de 5 et 3: ");
-        for (int i = 0; i <= 100; i++) {
-            if ( i % 3 == 0 && i % 5 == 0){
-                System.out.print(i);
+
+            System.out.print("Enter 1st operand => ");
+            double op1 = scan.nextDouble();
+            System.out.print("Enter 2nd operand => ");
+            double op2 = scan.nextDouble();
+
+
+            switch (operation) {
+                case '+':
+                    System.out.println("Sum = " + (op1 + op2));
+                    break;
+                case '-':
+                    System.out.println("Subtraction = " + (op1 - op2));
+                    break;
+                case '*':
+                    System.out.println("Multiplication = " + (op1 * op2));
+                    break;
+                case '/':
+                    if (op2 == 0) {
+                        System.out.println("Division impossible!");
+                    } else {
+                        System.out.println("Division = " + (op1 / op2));
+                    }
+                    break;
+                default:
+                    System.out.println("Invalid operation!");
+                    break;
             }
         }
 
+        scan.close();
     }
 }
