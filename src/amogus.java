@@ -50,7 +50,7 @@ public class amogus {
         scan.close();
     */
 
-        System.out.println("Bienvenue dans le jeu de devinette");
+        /*System.out.println("Bienvenue dans le jeu de devinette");
         int r = (int) (Math.random() * 100) + 1;
         int x =0;
         boolean y = true;
@@ -69,6 +69,98 @@ public class amogus {
                 System.out.println("Tres bien !! , vous avez devinez le nbr secret ! ");
                 y=false;
             }
+        }*/
+
+        /*int[] tableauZwin = new int[10];
+
+        for (int i = 0; i < 10 ; i++){
+            tableauZwin[i] =(int) (Math.random() * 100);
         }
+
+        System.out.println("Tableau : ");
+        for (int i = 0; i < tableauZwin.length; i++) {
+            System.out.print(tableauZwin[i]);
+            System.out.print(" | ");
+        }
+
+        System.out.println();
+        System.out.println("Tableau inverse : ");
+        for (int i = tableauZwin.length -1; i >= 0 ; i--) {
+            System.out.print(tableauZwin[i]);
+            System.out.print(" | ");
+        }
+        System.out.println();*/
+
+       /* int[] tableauZwin = new int[10];
+
+        for (int i = 0; i < 10 ; i++){
+            if ((i & 2) == 0) {
+                tableauZwin[i] = 9;
+            }else
+                tableauZwin[i] =(int) (Math.random() * 100);
+        }
+
+        System.out.println("Tableau : ");
+        for (int i = 0; i < tableauZwin.length; i++) {
+            System.out.print(tableauZwin[i]);
+            System.out.print(" | ");
+        }
+
+
+        System.out.println();
+        System.out.print("Look for the value => ");
+        int target = scan.nextInt();
+
+        int count = 0;
+        for (int i = 0; i < tableauZwin.length; i++) {
+            if (target == tableauZwin[i]){
+                count++;
+            }
+        }
+
+        System.out.print(target + " was found " + count + " time(s).");*/
+
+            int[] tab1 = new int[5];
+            int[] tab2 = new int[5];
+            int[] tab = new int[10];
+            Scanner s = new Scanner(System.in);
+
+            System.out.println("Veuillez saisir 5 nombres :");
+            for (int i = 0; i < tab1.length; i++) {
+                tab1[i] = s.nextInt();
+            }
+
+            System.out.println("Veuillez saisir 5 autres nombres :");
+            for (int i = 0; i < tab2.length; i++) {
+                tab2[i] = s.nextInt();
+            }
+
+            for (int i = 0; i < 5; i++) {
+                tab[i] = tab1[i];
+            }
+            for (int i = 5; i < 10; i++) {
+                tab[i] = tab2[i - 5];
+            }
+
+            System.out.println("Tableau fusionné :");
+            for (int i = 0; i < 10; i++) {
+                System.out.println("tab[" + i + "] = " + tab[i]);
+            }
+
+            for (int i = 0; i < tab.length - 1; i++) {
+                for (int j = 0; j < tab.length - 1 - i; j++) {
+                    if (tab[j] > tab[j + 1]) {
+                        int temp = tab[j];
+                        tab[j] = tab[j + 1];
+                        tab[j + 1] = temp;
+                    }
+                }
+            }
+
+            System.out.println("Tableau trié :");
+            for (int i = 0; i < 10; i++) {
+                System.out.println("tab[" + i + "] = " + tab[i]);
+            }
+
     }
 }
