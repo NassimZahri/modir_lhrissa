@@ -54,5 +54,20 @@ public class Bibliotheque {
 
         bibliotheque.afficherLivres();
 
+        Emprunteur nouvelEmprunteur = new Emprunteur("Nom", "Prenom", 1);
+        Emprunteur nouvelEmprunteur2 = new Emprunteur("Nom2", "Prenom2", 2);
+        Emprunteur nouvelEmprunteur3 = new Emprunteur("Nom3", "Prenom3", 3);
+
+        nouveauLivre.emprunterLivre(nouvelEmprunteur);
+        nouveauLivre2.emprunterLivre(nouvelEmprunteur2);
+        nouveauLivre3.emprunterLivre(nouvelEmprunteur3);
+
+        bibliotheque.ajouterEmprunteur(nouvelEmprunteur);
+        bibliotheque.ajouterEmprunteur(nouvelEmprunteur2);
+        bibliotheque.ajouterEmprunteur(nouvelEmprunteur3);
+
+        bibliotheque.afficherEmprunteurs();
+
+
     }
 }
