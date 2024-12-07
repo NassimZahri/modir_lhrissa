@@ -1,3 +1,4 @@
+/*
 package Classes_2;
 
 public class Etudiant extends Personne implements Affichage{
@@ -16,4 +17,4 @@ public class Etudiant extends Personne implements Affichage{
     public void afficher() {
         this.afficherEtu();
     }
-}
+}*/

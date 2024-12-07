@@ -1,3 +1,4 @@
+/*
 package Classes_2;
 
 public class Main {
@@ -6,3 +7,4 @@ public class Main {
 
     }
 }
+*/
