@@ -1,3 +1,4 @@
+/*
 package Exceptions;
 
 import java.util.Scanner;
@@ -5,7 +6,8 @@ import java.util.Scanner;
 public class kys {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        /*    try {
+        */
+/*    try {
         System.out.println("== Division== ");
         System.out.print("Premier operand => ");
         int operand1 = scan.nextInt();
@@ -22,8 +24,10 @@ public class kys {
         }finally {
             System.out.println("fin.");
         }
-    }*/
-        /*try {
+    }*//*
+
+        */
+/*try {
         System.out.print("Premier operand => ");
         int operand1 = Integer.parseInt(scan.nextLine());
 
@@ -43,12 +47,15 @@ public class kys {
         }finally {
             System.out.println("fin.");
         }
-    }*/
+    }*//*
 
-        /*int FiveInts[] = new int[5];
+
+        */
+/*int FiveInts[] = new int[5];
         try {
             System.out.print("");
-        }*/
+        }*//*
+
 
         try {
             System.out.print("Age? => ");
@@ -74,3 +81,4 @@ public class kys {
     }
 
 }
+*/
